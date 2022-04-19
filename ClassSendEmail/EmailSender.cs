@@ -15,7 +15,8 @@ namespace ClassSendEmail
         {
             _emailConfiguration = new EmailConfiguration
             {
-                From= "its222809@gmail.com",
+                From = "its222809@gmail.com",
+                //From= "\"Josh Man\" <its222809@gmail.com",
                 SmtpServer = "smtp.gmail.com",
                 Port = 587,
                 UserName = "its222809@gmail.com",
