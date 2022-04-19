@@ -25,17 +25,18 @@ namespace ClassSendEmail
 
         public void SendMessage(Message message)
         {
-            Send(CreateEmailMessage(message));
+            var msg = CreateEmailMessage(message);
+            Send(msg);
         }
 
         private MimeMessage CreateEmailMessage(Message message)
         {
             var bodyBuilder = new BodyBuilder();
             bodyBuilder.HtmlBody = message.Content;
-            bodyBuilder.TextBody = "This is some plain text";
             if(!string.IsNullOrEmpty(message.File))
                 bodyBuilder.Attachments.Add(message.File);
             var emailMessage = new MimeMessage();
+            //emailMessage.
             emailMessage.From.Add(new MailboxAddress(_emailConfiguration.From));
             emailMessage.To.AddRange(message.To);
             emailMessage.Subject = message.Subject;

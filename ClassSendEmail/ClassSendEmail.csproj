@@ -10,6 +10,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="16\index.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="files\1.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
