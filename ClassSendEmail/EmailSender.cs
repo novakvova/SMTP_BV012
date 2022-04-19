@@ -38,7 +38,7 @@ namespace ClassSendEmail
                 bodyBuilder.Attachments.Add(message.File);
             var emailMessage = new MimeMessage();
             //emailMessage.
-            emailMessage.From.Add(new MailboxAddress(_emailConfiguration.From));
+            emailMessage.From.Add(new MailboxAddress("Stepan", _emailConfiguration.From));
             emailMessage.To.AddRange(message.To);
             emailMessage.Subject = message.Subject;
             emailMessage.Body = bodyBuilder.ToMessageBody(); //new TextPart(MimeKit.Text.TextFormat.Text) { Text = message.Content };
